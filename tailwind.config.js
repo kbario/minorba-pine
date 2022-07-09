@@ -1,8 +1,16 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{html,ts}","./src/**/**/*.{html,ts}"],
+  content: [
+    "./src/app/*.{html,ts}",
+    "./src/app/**/*.{html,ts}",
+    "./src/app/**/**/*.{html,ts}",
+  ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        logo: "url('/assets/.minorba_logo.svg')",
+      },
+    },
   },
   plugins: [],
-}
+};

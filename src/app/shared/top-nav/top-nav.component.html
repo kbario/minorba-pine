@@ -1,12 +1,33 @@
 <mat-toolbar>
   <mat-toolbar-row class="justify-between items-center">
-    <div>
+    <div class="flex gap-4 items-center">
+      <a
+        mat-icon-button
+        [routerLink]="'/'"
+        class="flex items-center justify-center"
+      >
+        <img src="../../../assets/minorba_logo.svg" alt="" />
+      </a>
       <h6>Minorba Pine</h6>
     </div>
-    <div>
-      <button mat-icon-button>
-        <mat-icon> menu </mat-icon>
-      </button>
+    <div
+      *ngIf="isPhone$ | async; else menuBtn"
+      class="flex w-1/3 max-w-lg min-w-fit gap-2 justify-around"
+    >
+      <div *ngFor="let item of menuItems">
+        <a
+          mat-button
+          [routerLink]="'/' + item.replace(' ', '-').toLowerCase()"
+          [routerLinkActive]="'font-bold bg-slate-200'"
+          >{{ item }}</a
+        >
+      </div>
     </div>
   </mat-toolbar-row>
 </mat-toolbar>
+
+<ng-template #menuBtn>
+  <button mat-icon-button>
+    <mat-icon> menu </mat-icon>
+  </button>
+</ng-template>
