@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-contact-us',
@@ -12,5 +12,15 @@ export class ContactUsComponent {
     { method: 'phone', key: 'minorba1@bigpond.com' },
     { method: 'phone', key: 'minorba1@bigpond.com' },
   ];
-  public readonly displayedColumns = [];
+
+  public readonly openingHours = [
+    { day: 'Monday', open: '8am', close: '5pm' },
+    { day: 'Tuesday', open: '8am', close: '5pm' },
+    { day: 'Wednesday', open: '8am', close: '5pm' },
+    { day: 'Thursday', open: '8am', close: '5pm' },
+    { day: 'Friday', open: '8am', close: '3pm' },
+    { day: 'Saturday', open: null, close: null },
+    { day: 'Sunday', open: null, close: null },
+    { day: 'Public Holidays', open: null, close: null },
+  ];
 }

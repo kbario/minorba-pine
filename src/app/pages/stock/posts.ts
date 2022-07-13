@@ -15,6 +15,6 @@ export const shorterSizes: diameterAndNumber[] = [
   { diameter: 250, number: 7 },
 ];
 
-export const longDiameters: diameterAndNumber[] = [
-  { diameter: 120, number:  },
-];
+// export const longDiameters: diameterAndNumber[] = [
+//   { diameter: 120, number:  },
+// ];

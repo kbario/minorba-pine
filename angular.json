@@ -104,5 +104,8 @@
       }
     }
   },
-  "defaultProject": "minorba-pine"
+  "defaultProject": "minorba-pine",
+  "cli": {
+    "analytics": false
+  }
 }
