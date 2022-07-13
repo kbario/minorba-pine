@@ -16,8 +16,9 @@ import { ContactUsComponent } from './pages/contact-us/contact-us.component';
 import { LandingComponent } from './pages/landing/landing.component';
 import { SourcesComponent } from './pages/sources/sources.component';
 import { StockComponent } from './pages/stock/stock.component';
-import { SideNavComponent } from './shared/side-nav/side-nav.component';
-import { TopNavComponent } from './shared/top-nav/top-nav.component';
+import { SideNavComponent } from './shared/components/side-nav/side-nav.component';
+import { TopNavComponent } from './shared/components/top-nav/top-nav.component';
+import { NavItemComponent } from './shared/components/nav-item/nav-item.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { TopNavComponent } from './shared/top-nav/top-nav.component';
     StockComponent,
     SourcesComponent,
     LandingComponent,
+    NavItemComponent,
   ],
   imports: [
     BrowserModule,

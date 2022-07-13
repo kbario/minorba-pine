@@ -1,1 +1,19 @@
-<p>contact-us works!</p>
+<div>
+  <h1>Contact us</h1>
+  <table mat-table [dataSource]="contactInfo">
+    <ng-container matColumnDef="method">
+      <th mat-header-cell *matHeaderCellDef></th>
+      <td mat-cell *matCellDef="let contact">{{ contact.method }}</td>
+    </ng-container>
+    <ng-container matColumnDef="key">
+      <th mat-header-cell *matHeaderCellDef></th>
+      <td mat-cell *matCellDef="let contact">{{ contact.key }}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+  <!-- phone, email -->
+  <!-- openning hours -->
+  <!-- address -->
+</div>

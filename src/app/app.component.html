@@ -1,6 +1,12 @@
 <main class="flex w-screen h-screen flex-col overflow-hidden">
-  <app-top-nav></app-top-nav>
-  <main class="w-full h-full overflow-scroll p-4">
-    <router-outlet></router-outlet>
+  <app-top-nav
+    [navItems]="navItems"
+    (sideNavOpenEvent$)="handleSideNavEvent($event)"
+  ></app-top-nav>
+  <main class="w-full h-full overflow-scroll">
+    <app-side-nav
+      [sideNavOpen]="sideNavOpen"
+      [navItems]="navItems"
+    ></app-side-nav>
   </main>
 </main>

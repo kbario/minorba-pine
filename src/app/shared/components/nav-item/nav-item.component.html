@@ -1,0 +1,9 @@
+<a
+  mat-button
+  class="w-full"
+  [routerLink]="'/' + navItem.route"
+  [routerLinkActive]="'font-bold bg-slate-200'"
+>
+  <mat-icon *ngIf="icons === true"> {{ navItem.icon }}</mat-icon>
+  {{ navItem.text }}
+</a>

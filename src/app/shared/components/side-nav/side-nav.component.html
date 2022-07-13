@@ -1,0 +1,15 @@
+<mat-sidenav-container class="w-full h-full">
+  <mat-sidenav #sidenav mode="side" [(opened)]="sideNavOpen" position="end">
+    <div class="flex flex-col w-full p-4 gap-4 items-stretch justify-around">
+      <app-nav-item
+        *ngFor="let navItem of navItems"
+        [navItem]="navItem"
+        [icons]="true"
+      ></app-nav-item>
+    </div>
+  </mat-sidenav>
+
+  <mat-sidenav-content class="w-full h-full p-4">
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

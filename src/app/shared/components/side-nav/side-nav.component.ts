@@ -1,3 +1,4 @@
+import { navItem } from '../../types/navItem';
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
@@ -7,6 +8,9 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class SideNavComponent implements OnInit {
   constructor() {}
+
+  @Input()
+  navItems!: ReadonlyArray<navItem>;
 
   @Input() sideNavOpen: boolean = false;
 

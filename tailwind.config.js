@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        logo: "url('/assets/.minorba_logo.svg')",
+        logo: "url('/assets/minorba_logo.svg')",
       },
     },
   },
